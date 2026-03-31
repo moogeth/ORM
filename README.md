@@ -36,13 +36,13 @@ Execute Django admin using localhost and create details for 10 entries
 
 ## PROGRAM
 admins.py
-
+~~~
 from django.contrib import admin
 from .models import Car_Inventory, Car_InventoryAdmin
 admin.site.register(Car_Inventory, Car_InventoryAdmin)
-
+~~~
 models.py
-
+~~~
 from django.db import models
 from django.contrib import admin
 class Car_Inventory(models.Model): 
@@ -55,7 +55,7 @@ class Car_Inventory(models.Model):
     Price = models.IntegerField( )
 class Car_InventoryAdmin(admin.ModelAdmin):
     list_display = ('No_Plate', 'Car_Model', 'Car_Type', 'Mileage', 'Engine_Type','Make_Date', 'Price')
-
+~~~
 ## OUTPUT
 
 ![alt text](<Screenshot (26).png>)
